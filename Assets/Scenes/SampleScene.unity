@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196b4380d1f843a4da814e9a20fc9085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  teleportManager: {fileID: 0}
+  teleportManager: {fileID: 1563529043}
 --- !u!1 &465337616
 GameObject:
   m_ObjectHideFlags: 0
