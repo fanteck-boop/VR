@@ -37,12 +37,12 @@ public class VRLightsaberAnimatorController : MonoBehaviour
 
     void UpdateHandState()
     {
-        // Get current animator state
-        AnimatorStateInfo stateInfo = handAnimator.GetCurrentAnimatorStateInfo(0);
+        float grabValue = handAnimator.GetFloat("grab");
+        float triggerValue = handAnimator.GetFloat("trigger");
 
-        if (stateInfo.IsName("fist"))
+        if (grabValue > 0.5f)
             currentState = HandState.Fist;
-        else if (stateInfo.IsName("point"))
+        else if (triggerValue > 0.5f)
             currentState = HandState.Point;
         else
             currentState = HandState.Idle;
@@ -53,6 +53,7 @@ public class VRLightsaberAnimatorController : MonoBehaviour
             lastState = currentState;
         }
     }
+
 
     void OnStateChanged(HandState newState)
     {
